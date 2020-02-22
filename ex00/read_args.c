@@ -6,7 +6,7 @@
 /*   By: madorna- <madorna-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 16:35:59 by madorna-          #+#    #+#             */
-/*   Updated: 2020/02/22 18:49:02 by madorna-         ###   ########.fr       */
+/*   Updated: 2020/02/22 18:51:31 by madorna-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	read_args(int count, char **args)
 	{
 		write(1, "1 param\n", 9);
 		write(1, args[1], one_arg(args[1]));
+		write(1, "\n", 1);
 	}
 	else if (count == 3)
 	{
@@ -30,6 +31,7 @@ void	read_args(int count, char **args)
 		write(1, args[1], one_arg(args[1]));
 		write(1, "\n", 1);
 		write(1, args[2], one_arg(args[2]));
+		write(1, "\n", 1);
 	}
 }
 
