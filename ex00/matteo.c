@@ -14,8 +14,8 @@ int main(int argc, char **argv)
 
 	struct rush_dict
 	{
-		char *num;
-		char *val;
+		char num[];
+		char val[];
 	};
 
 	struct rush_dict *tab;
