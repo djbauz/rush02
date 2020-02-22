@@ -42,6 +42,7 @@ int main(int argc, char **argv)
 	ft_strncpy(destination, c, n);
 	destination[n] = '\0';
 	printf("destintation=  %s\n", destination);
+	tab[0].num = destination;
 	while (c[n] != 10)
 	{
 		n++;
