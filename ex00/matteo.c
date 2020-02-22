@@ -6,7 +6,7 @@
 /*   By: madorna- <madorna-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 20:30:58 by madorna-          #+#    #+#             */
-/*   Updated: 2020/02/22 20:30:59 by madorna-         ###   ########.fr       */
+/*   Updated: 2020/02/22 20:50:17 by madorna-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,13 @@
 
 int main(int argc, char **argv)
 {
-	int fd, sz;
+	int fd;
+	int sz;
 	char *c;
 	int n;
 	int count;
 	char *destination;
+	int helper;
 
 	struct rush_dict
 	{
@@ -33,6 +35,7 @@ int main(int argc, char **argv)
 		char *val;
 	};
 
+	read_args(argc, argv);
 	destination = malloc(100);
 	struct rush_dict *tab;
 	tab = (struct rush_dict *) malloc(sizeof(struct rush_dict));
@@ -46,19 +49,16 @@ int main(int argc, char **argv)
 	
 	c[sz] = '\0';
 
-	read_args(argc, argv);
-	while (c[n] != 10)
+	helper = 0;
+	while (c[n] != '\0')
 	{
+		if(c[n] )
 		n++;
 	}
 	ft_strncpy(destination, c, n);
 	destination[n] = '\0';
 	printf("destintation=  %s\n", destination);
 	tab[0].num = destination;
-	while (c[n] != 10)
-	{
-		n++;
-	}
 	close(fd);
 	return (0);
 }
