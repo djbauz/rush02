@@ -6,18 +6,18 @@
 /*   By: madorna- <madorna-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 16:35:59 by madorna-          #+#    #+#             */
-/*   Updated: 2020/02/22 18:53:36 by madorna-         ###   ########.fr       */
+/*   Updated: 2020/02/22 20:18:08 by madorna-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		one_arg(char *args);
+int one_arg(char *args);
 
-void	read_args(int count, char **args)
+void read_args(int count, char **args) // This func reads args from execution command
 {
 	if (count != 2 && count != 3)
 	{
 		write(1, "Error\n", 6);
-		return;
+		exit (0);
 	}
 	else if (count == 2)
 	{
@@ -35,14 +35,23 @@ void	read_args(int count, char **args)
 	}
 }
 
-int		one_arg(char *args)
+int one_arg(char *args) // gets number of char in the execution args, one by one (arg1 and then arg2)
 {
 	int i;
-	
+
 	i = 0;
+
 	while (args[i] != '\0')
 	{
-		i++;
+		if (args[i] >= '0' && args[i] <= '9')
+		{
+			i++;
+		}
+		else
+		{
+			write(1, "Error\n", 6);
+			exit (0);
+		}
 	}
 	return (i);
 }
