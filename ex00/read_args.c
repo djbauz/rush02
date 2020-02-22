@@ -6,13 +6,13 @@
 /*   By: madorna- <madorna-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 16:35:59 by madorna-          #+#    #+#             */
-/*   Updated: 2020/02/22 18:46:57 by madorna-         ###   ########.fr       */
+/*   Updated: 2020/02/22 18:49:02 by madorna-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int one_arg(char *args);
+int		one_arg(char *args);
 
-void read_args(int count, char **args)
+void	read_args(int count, char **args)
 {
 	if (count != 2 && count != 3)
 	{
@@ -33,7 +33,7 @@ void read_args(int count, char **args)
 	}
 }
 
-int one_arg(char *args)
+int		one_arg(char *args)
 {
 	int i;
 	
