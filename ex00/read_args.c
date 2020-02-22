@@ -6,11 +6,24 @@
 /*   By: madorna- <madorna-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 16:35:59 by madorna-          #+#    #+#             */
-/*   Updated: 2020/02/22 16:41:35 by madorna-         ###   ########.fr       */
+/*   Updated: 2020/02/22 16:57:59 by madorna-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*read_args(int count, char **args)
 {
-
+	if (count != 2 && count != 3)
+	{
+		write(1, "Error\n", 6);
+	}
+	else if (count == 2)
+	{
+		write(1, "1 param", 8);
+	}
+	else if (count == 3)
+	{
+		write(1, "2 params", 9);
+	}
+	
+		
 }
