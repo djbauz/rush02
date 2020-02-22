@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 	};
 
 	struct rush_dict *tab;
+	tab = (struct rush_dict *) malloc(sizeof(struct rush_dict));
 	count = 0;
 	c = (char *) malloc(sizeof(char) * 100);
 	n = 1;
