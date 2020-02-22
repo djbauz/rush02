@@ -2,6 +2,7 @@
 #include <unistd.h> // close
 #include <stdio.h>
 #include <stdlib.h>
+#include "read_args.c"
 #define PATH "numbers.dict"
 
 int main(int argc, char **argv)
@@ -22,6 +23,9 @@ int main(int argc, char **argv)
 	//printf("fd = %d\n", fd);
 	//printf("called read(%d, c, 100).  returned that %d bytes  were read.\n", fd, sz); 
 	c[sz] = '\0';
+
+	read_args(argc, argv);
+
 	//printf("Those bytes are as follows: \n%s\n", c);
 	while (c[n] != '\0')
 	{
