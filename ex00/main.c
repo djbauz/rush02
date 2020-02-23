@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   matteo.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbante <mbante@student.42.fr>              +#+  +:+       +#+        */
+/*   By: madorna- <madorna-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 20:30:58 by madorna-          #+#    #+#             */
-/*   Updated: 2020/02/23 12:01:55 by mbante           ###   ########.fr       */
+/*   Updated: 2020/02/22 20:50:17 by madorna-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,6 @@ int main(int argc, char **argv)
 	destination[n] = '\0';
 	printf("destintation=  %s\n", destination);
 	tab[0].num = destination;
-	printf("tab[0].num =  %s\n", tab[0].num);
-	while (c[n] != 10)
-	{
-		n++;
-	}
 	close(fd);
 	return (0);
 }
